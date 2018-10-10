@@ -13,21 +13,22 @@ A tutorial how to setup a local deep learning environment. I tend to forget thin
 ### 2. Verify Install
 
 Run this to verify first step (probably need to restart terminal if docker was added to sudo users, heck just restart your whole machine) 
-```bash
+  ```bash
   docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
-```
+  ```
 
 ### 3. Create a Deep Learning Container
 Create a docker container (the `-v` maps your local file sytem to docker one `/workspace` so that you can access those files from inside docker.
 
-    * [PyTorch](https://pytorch.org/)
+  * [TensorFlow](https://www.tensorflow.org/)
+     ```bash 
+    nvidia-docker run -it -p 8888:8888 --name=tensorflow --ipc=host -v /path_to_your_project_dir:/workspace gcr.io/tensorflow/tensorflow:latest-gpu-py3
+    ```
+    
+  * [PyTorch](https://pytorch.org/)
     ```bash
     nvidia-docker run -it -p 8888:8888 --name=pytorch --ipc=host -v /path_to_your_project_dir:/workspace pytorch/pytorch:latest
     ```
-    
-    * [TensorFlow](https://www.tensorflow.org/)
-    ```bash
-    nvidia-docker run -it -p 8888:8888 --name=tensorflow --ipc=host -v /path_to_your_project_dir:/workspace gcr.io/tensorflow/tensorflow:latest-gpu-py3
 
   
 ### 4. Install Libraries
