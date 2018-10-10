@@ -9,13 +9,16 @@ A tutorial how to setup a local deep learning environment. I tend to forget thin
 
 # Setup
 
-1. Install dependencies
-2. Run this to verify first step (probably need to restart terminal if docker was added to sudo users, heck just restart your whole machine) 
+### 1. Install Dependencies
+### 2. Verify Install
+
+Run this to verify first step (probably need to restart terminal if docker was added to sudo users, heck just restart your whole machine) 
 ```bash
   docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
 ```
 
-3. Create a docker container (the `-v` maps your local file sytem to docker one `/workspace` so that you can access those files from inside docker.
+### 3. Create a Deep Learning Container
+Create a docker container (the `-v` maps your local file sytem to docker one `/workspace` so that you can access those files from inside docker.
 
     * [PyTorch](https://pytorch.org/)
     ```bash
@@ -26,14 +29,14 @@ A tutorial how to setup a local deep learning environment. I tend to forget thin
     ```bash
     nvidia-docker run -it -p 8888:8888 --name=tensorflow --ipc=host -v /path_to_your_project_dir:/workspace gcr.io/tensorflow/tensorflow:latest-gpu-py3
 
-    ```
-    
-4. Shell into your container and install everything you need
+  
+### 4. Install Libraries
+Now that you are inside the shell you can install anything you want. First we need to shell into the container than run install commands.
+  * Shell into a docker container
   ```bash
   docker exec -it container_name bash
   ```
-  
-5. Now that you are inside the shell you can install anything you want.
+
   * [Jupyter](https://jupyter.org/install)
   ```bash
   python3 -m pip install --upgrade pip
@@ -45,7 +48,8 @@ A tutorial how to setup a local deep learning environment. I tend to forget thin
   python3 -m pip install tqdm keras scipy matplotlib numpy scipy nltk
   ```
   
-6. Docker container basics
+### 5. Docker Container Basics
+Basic commands to help you start with docker.
 
   * Start a container
     ```bash
