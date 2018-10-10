@@ -41,7 +41,7 @@ Now that you are inside the shell you can install anything you want. First we ne
   * General purpose scientific compute libs and utilities
   ```bash
   python3 -m pip install --upgrade pip
-  python3 -m pip install jupyter tqdm keras scipy matplotlib numpy scipy nltk sklearn lightgbm kaggle h5py
+  python3 -m pip install jupyter tqdm keras scipy matplotlib numpy scipy nltk sklearn lightgbm kaggle h5py xgboost gensim spacy requests pandas
   ```
   
 ### 5. Docker Container Basics
@@ -76,6 +76,12 @@ Basic commands to help you start with docker.
     ```bash
     docker container prune
     ```
+    
+### 6. Jupyter
+To run jupyter notebooks:
+```bash
+jupyter notebook --port=8888 --ip=127.0.0.1 --allow-root
+```
  
 # Author
 
