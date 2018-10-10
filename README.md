@@ -22,7 +22,7 @@ Create a docker container (the `-v` maps your local file sytem to docker one `/w
 
   * [TensorFlow](https://www.tensorflow.org/)
      ```bash 
-    nvidia-docker run -it -p 8888:8888 --name=tensorflow --ipc=host -v /path_to_your_project_dir:/workspace gcr.io/tensorflow/tensorflow:latest-gpu-py3
+    nvidia-docker run -it -p 127.0.0.1:8888:8888 --name=tensorflow --ipc=host -v /path_to_your_project_dir:/workspace gcr.io/tensorflow/tensorflow:latest-gpu-py3
     ```
     
   * [PyTorch](https://pytorch.org/)
@@ -38,15 +38,10 @@ Now that you are inside the shell you can install anything you want. First we ne
   docker exec -it container_name bash
   ```
 
-  * [Jupyter](https://jupyter.org/install)
-  ```bash
-  python3 -m pip install --upgrade pip
-  python3 -m pip install jupyter
-  ```
-
   * General purpose scientific compute libs and utilities
   ```bash
-  python3 -m pip install tqdm keras scipy matplotlib numpy scipy nltk sklearn lightgbm kaggle h5py
+  python3 -m pip install --upgrade pip
+  python3 -m pip install jupyter tqdm keras scipy matplotlib numpy scipy nltk sklearn lightgbm kaggle h5py
   ```
   
 ### 5. Docker Container Basics
