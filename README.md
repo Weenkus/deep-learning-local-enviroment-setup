@@ -32,7 +32,8 @@ A tutorial how to setup a local deep learning environment. I tend to forget thin
   ```bash
   docker exec -it container_name bash
   ```
-Now that you are inside the shell you can install anything you want.
+  
+5. Now that you are inside the shell you can install anything you want.
   * [Jupyter](https://jupyter.org/install)
   ```bash
   python3 -m pip install --upgrade pip
@@ -44,7 +45,7 @@ Now that you are inside the shell you can install anything you want.
   python3 -m pip install tqdm keras scipy matplotlib numpy scipy nltk
   ```
   
-5. Docker container basics
+6. Docker container basics
 
   * Start a container
     ```bash
@@ -52,29 +53,29 @@ Now that you are inside the shell you can install anything you want.
     ```
   
   * Stop a container
-   ```bash
-   docker start container_name
-   ```
+     ```bash
+     docker start container_name
+     ```
   
   * Show images
-  ```bash
-  docker images
-  ```
+    ```bash
+    docker images
+    ```
   
   * Show processes
-  ```bash
-  docker ps
-  ```
+    ```bash
+    docker ps
+    ```
   
   * Show all processes
-  ```bash
-  docker ps -a
-  ```
+    ```bash
+    docker ps -a
+    ```
   
   * Delete all stopped containers
-  ```bash
-  docker container prune
-  ```
+    ```bash
+    docker container prune
+    ```
  
 # Author
 
