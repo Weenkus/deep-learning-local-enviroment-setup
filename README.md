@@ -46,7 +46,7 @@ Now that you are inside the shell you can install anything you want. First we ne
 
   * General purpose scientific compute libs and utilities
   ```bash
-  python3 -m pip install tqdm keras scipy matplotlib numpy scipy nltk
+  python3 -m pip install tqdm keras scipy matplotlib numpy scipy nltk sklearn lightgbm kaggle h5py
   ```
   
 ### 5. Docker Container Basics
