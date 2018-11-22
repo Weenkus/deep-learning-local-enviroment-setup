@@ -22,12 +22,12 @@ Create a docker container (the `-v` maps your local file sytem to docker one `/w
 
   * [TensorFlow](https://www.tensorflow.org/)
      ```bash 
-    nvidia-docker run -it -p 127.0.0.1:8888:8888 --name=tensorflow --ipc=host -v /path_to_your_project_dir:/workspace tensorflow/tensorflow:latest-gpu-py3
+    nvidia-docker run -it -p 127.0.0.1:8888:8888 --name=tensorflow --ipc=host -v /path_to_your_project_dir:/notebooks/workspace tensorflow/tensorflow:latest-gpu-py3
     ```
     
   * [PyTorch](https://pytorch.org/)
     ```bash
-    nvidia-docker run -it -p 8888:8888 --name=pytorch --ipc=host -v /path_to_your_project_dir:/workspace pytorch/pytorch:latest
+    nvidia-docker run -it -p 8888:8888 --name=pytorch --ipc=host -v /path_to_your_project_dir:/notebooks/workspace pytorch/pytorch:latest
     ```
 
   
