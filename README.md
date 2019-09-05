@@ -1,6 +1,6 @@
 # Deep Learning Local Environment Setup (GPU)
 
-A tutorial for how to set up a local deep learning environment. I tend to forget things, so this is a reminder of how I like to do it. The gist of it is that, instead of installing CUDA and playing with local enviroments, we will use [docker](https://www.docker.com/) and [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) which will install CUDA for us, so that our job comes down to just copying and pasting a single line of code.
+A tutorial for how to set up a local deep learning environment. I tend to forget things, so this is a reminder of how I like to do it. The gist of it is that, instead of installing CUDA and playing with local enviroments, we will use [docker](https://www.docker.com/) and [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) which will install CUDA for us, so that our job comes down to copying and pasting a single line of code.
 
 # Dependencies
 
